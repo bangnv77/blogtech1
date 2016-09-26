@@ -2,5 +2,12 @@
 <% provide(:author, 'active') %>
 
 <div class="row">
-  <%= render @posts %>
+  <%= link_to 'New post', new_author_post_path, class: 'btn btn-primary btn-lg' %>
+  <br><br>
+  <table class="table table-striped">
+    <tr>
+      <th colspan="4">Title</th>
+    </tr>
+    <%= render @posts %>
+  </table>
 </div>
